@@ -243,10 +243,10 @@ __metadata:
     "@affine/nbstore": "workspace:*"
     "@affine/track": "workspace:*"
     "@blocksuite/affine": "workspace:*"
-    "@capacitor/android": "npm:^7.0.0"
+    "@capacitor/android": "npm:^8.0.0"
     "@capacitor/app": "npm:^7.0.0"
-    "@capacitor/cli": "npm:^7.0.0"
-    "@capacitor/core": "npm:^7.0.0"
+    "@capacitor/cli": "npm:^8.0.0"
+    "@capacitor/core": "npm:^8.0.0"
     "@capacitor/keyboard": "npm:^7.0.0"
     "@capacitor/status-bar": "npm:^7.0.0"
     "@capgo/inappbrowser": "npm:^8.0.0"
@@ -667,10 +667,10 @@ __metadata:
     "@blocksuite/affine": "workspace:*"
     "@capacitor/app": "npm:^7.0.0"
     "@capacitor/browser": "npm:^7.0.0"
-    "@capacitor/cli": "npm:^7.0.0"
-    "@capacitor/core": "npm:^7.0.0"
+    "@capacitor/cli": "npm:^8.0.0"
+    "@capacitor/core": "npm:^8.0.0"
     "@capacitor/haptics": "npm:^7.0.0"
-    "@capacitor/ios": "npm:^7.0.0"
+    "@capacitor/ios": "npm:^8.0.0"
     "@capacitor/keyboard": "npm:^7.0.0"
     "@toeverything/infra": "workspace:^"
     "@types/react": "npm:^19.0.1"
@@ -722,7 +722,7 @@ __metadata:
   resolution: "@affine/mobile-shared@workspace:packages/frontend/apps/mobile-shared"
   dependencies:
     "@affine/core": "workspace:*"
-    "@capacitor/core": "npm:^7.0.0"
+    "@capacitor/core": "npm:^8.0.0"
     typescript: "npm:^5.9.3"
     vitest: "npm:^4.0.18"
   languageName: unknown
@@ -753,7 +753,7 @@ __metadata:
   resolution: "@affine/monorepo@workspace:."
   dependencies:
     "@affine-tools/cli": "workspace:*"
-    "@capacitor/cli": "npm:^7.0.0"
+    "@capacitor/cli": "npm:^8.0.0"
     "@eslint/js": "npm:^9.39.2"
     "@faker-js/faker": "npm:^10.1.0"
     "@istanbuljs/schema": "npm:^0.1.3"
@@ -3301,12 +3301,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@capacitor/android@npm:^7.0.0":
-  version: 7.4.5
-  resolution: "@capacitor/android@npm:7.4.5"
+"@capacitor/android@npm:^8.0.0":
+  version: 8.3.1
+  resolution: "@capacitor/android@npm:8.3.1"
   peerDependencies:
-    "@capacitor/core": ^7.4.0
-  checksum: 10/c960f3dae60ab8d1b9a1848af72741dc05eca246399426eea32e36915696d42e29d82be0ddf350f3edd92b235cd58d03705ae00a38a25edbc410290ae8f44702
+    "@capacitor/core": ^8.3.0
+  checksum: 10/e2b0012af6ac95256dfb7d971c6f23bfdc4e79bd056e919957169a49d67590c5f6737e2dc5376b37c0bce9991ff32a3cd00ca776c2b53ca5c058d4ae6600f634
   languageName: node
   linkType: hard
 
@@ -3328,9 +3328,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@capacitor/cli@npm:^7.0.0":
-  version: 7.4.5
-  resolution: "@capacitor/cli@npm:7.4.5"
+"@capacitor/cli@npm:^8.0.0":
+  version: 8.3.1
+  resolution: "@capacitor/cli@npm:8.3.1"
   dependencies:
     "@ionic/cli-framework-output": "npm:^2.2.8"
     "@ionic/utils-subprocess": "npm:^3.0.1"
@@ -3346,22 +3346,22 @@ __metadata:
     prompts: "npm:^2.4.2"
     rimraf: "npm:^6.0.1"
     semver: "npm:^7.6.3"
-    tar: "npm:^6.1.11"
+    tar: "npm:^7.5.3"
     tslib: "npm:^2.8.1"
     xml2js: "npm:^0.6.2"
   bin:
     cap: bin/capacitor
     capacitor: bin/capacitor
-  checksum: 10/235998d88be7164102af04030e6a17268d63792cca620e06408f0199b250aa48b37b8e83aa6227930c2da880add9a50f3efcd7eee293baed6c6aaa1bf8e2e364
+  checksum: 10/bd264e71ac6465b9c990edb403dc9c1c623ae9bf48110e8208e0f155f7f175a8592f2da992b97276fef29619cf49c9bbee3f760fd2ea238661a942aef8ffc27e
   languageName: node
   linkType: hard
 
-"@capacitor/core@npm:^7.0.0":
-  version: 7.4.5
-  resolution: "@capacitor/core@npm:7.4.5"
+"@capacitor/core@npm:^8.0.0":
+  version: 8.3.1
+  resolution: "@capacitor/core@npm:8.3.1"
   dependencies:
     tslib: "npm:^2.1.0"
-  checksum: 10/22d83d386199b08e0ef7ee59bb44863b5aef89edeb40377deeabf7bf28cbaeded041677813dee58a6a585311ba9b3b82658336300d7239b663c5c4d499eda9ae
+  checksum: 10/cd71ddd42b415333586dd84fe0698574ad83297ace2044b6e2d698f6c2c871f8c4ed5a120f23eacd6e87679199dcb673c0bb2a2674ea95b62ee75dd48e72c1df
   languageName: node
   linkType: hard
 
@@ -3374,12 +3374,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@capacitor/ios@npm:^7.0.0":
-  version: 7.4.5
-  resolution: "@capacitor/ios@npm:7.4.5"
+"@capacitor/ios@npm:^8.0.0":
+  version: 8.3.1
+  resolution: "@capacitor/ios@npm:8.3.1"
   peerDependencies:
-    "@capacitor/core": ^7.4.0
-  checksum: 10/248dafcd68ddd759e76da15fe4ce68654a9e39d12edda5f6cec071a9c33ae6508d10a777f789db906688f4baf0e83058cd04713e1e15132f38d8a13777672d43
+    "@capacitor/core": ^8.3.0
+  checksum: 10/d1697aba574413a5448438044cc261f54bf7926490fbe7778b9d34d80ad7751acab097c55b8f4bd60b87c34bcce5708ca0dea717678c155f5ff9647833de3b4e
   languageName: node
   linkType: hard
 
@@ -33397,7 +33397,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tar@npm:^7.4.0, tar@npm:^7.4.3, tar@npm:^7.5.6, tar@npm:^7.5.7":
+"tar@npm:^7.4.0, tar@npm:^7.4.3, tar@npm:^7.5.3, tar@npm:^7.5.6, tar@npm:^7.5.7":
   version: 7.5.13
   resolution: "tar@npm:7.5.13"
   dependencies:
