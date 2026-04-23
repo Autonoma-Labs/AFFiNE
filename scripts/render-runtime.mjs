@@ -1,5 +1,5 @@
-import fs from 'node:fs';
 import { spawn } from 'node:child_process';
+import fs from 'node:fs';
 import process from 'node:process';
 
 function ensureDir(dir) {
@@ -7,6 +7,10 @@ function ensureDir(dir) {
 }
 
 function applyRenderDefaults(env) {
+  if (env.PORT) {
+    env.AFFINE_SERVER_PORT = env.PORT;
+  }
+
   if (!env.AFFINE_SERVER_EXTERNAL_URL && env.RENDER_EXTERNAL_URL) {
     env.AFFINE_SERVER_EXTERNAL_URL = env.RENDER_EXTERNAL_URL;
   }
