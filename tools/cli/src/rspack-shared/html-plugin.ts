@@ -66,15 +66,30 @@ const gitShortHash = once(() => {
   if (GITHUB_SHA) {
     return GITHUB_SHA.substring(0, 9);
   }
-  const repo = new Repository(ProjectRoot.value);
-  const shortSha = repo.head().target()?.substring(0, 9);
-  if (shortSha) {
-    return shortSha;
+
+  try {
+    const repo = new Repository(ProjectRoot.value);
+    const shortSha = repo.head().target()?.substring(0, 9);
+    if (shortSha) {
+      return shortSha;
+    }
+  } catch {}
+
+  try {
+    const sha = execSync(`git rev-parse --short HEAD`, {
+      encoding: 'utf-8',
+    }).trim();
+    if (sha) {
+      return sha;
+    }
+  } catch {}
+
+  const { RENDER_GIT_COMMIT } = process.env;
+  if (RENDER_GIT_COMMIT) {
+    return RENDER_GIT_COMMIT.substring(0, 9);
   }
-  const sha = execSync(`git rev-parse --short HEAD`, {
-    encoding: 'utf-8',
-  }).trim();
-  return sha;
+
+  return 'unknown';
 });
 
 const currentDir = Path.dir(import.meta.url);
