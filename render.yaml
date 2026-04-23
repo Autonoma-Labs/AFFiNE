@@ -1,0 +1,60 @@
+previews:
+  generation: automatic
+  expireAfterDays: 3
+
+services:
+  - type: web
+    name: affine
+    runtime: docker
+    plan: starter
+    region: oregon
+    numInstances: 1
+    autoDeployTrigger: commit
+    preDeployCommand: node ./scripts/render-runtime.mjs predeploy
+    healthCheckPath: /info
+    disk:
+      name: affine-data
+      mountPath: /root/.affine
+      sizeGB: 10
+    previews:
+      plan: starter
+      numInstances: 1
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DEPLOYMENT_TYPE
+        value: selfhosted
+      - key: AFFINE_SERVER_PORT
+        value: "3010"
+      - key: LISTEN_ADDR
+        value: 0.0.0.0
+      - key: AFFINE_INDEXER_ENABLED
+        value: "false"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: affine-postgres
+          property: connectionString
+      - key: REDIS_URL
+        fromService:
+          type: keyvalue
+          name: affine-redis
+          property: connectionString
+
+  - type: keyvalue
+    name: affine-redis
+    plan: starter
+    previewPlan: starter
+    region: oregon
+    maxmemoryPolicy: noeviction
+    ipAllowList: []
+
+databases:
+  - name: affine-postgres
+    plan: basic-1gb
+    region: oregon
+    databaseName: affine
+    user: affine
+    diskSizeGB: 15
+    storageAutoscalingEnabled: false
+    previewPlan: basic-256mb
+    previewDiskSizeGB: 1
